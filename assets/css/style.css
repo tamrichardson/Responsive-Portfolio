@@ -2,30 +2,88 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 34px;
+  color: #777777;
   background-image: url(../images/sakura.png);
   }
 
-  header {
-  margin: 0 auto;
-    padding-bottom: 40px;
-    padding-top: 22px;
-    width: 100%;
-    height: 15px;
-    color: #ffffff;
-    background-color: white;
-    border-bottom: 4px solid #dddddd;
+  *{
+    box-sizing: border-box;
   }
 
-   #logo {
-     float: left;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     text-align: bottom;
-    font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    overflow: hidden;
-     background: #4aaaa5;
-    }
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    clear: both;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-bottom: 20px;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  h1,
+h2,
+h3 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  color: #4aaaa5;
+}
+
+
+h1 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  line-height: 49px;
+  border-bottom: 3px solid #dddddd;
+}
+
+h2,
+h3 {
+  font-size: 22px;
+}
+
+#masthead {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin: 0 0 30px;
+  overflow: auto;
+  color: #ffffff;
+  background: #ffffff;
+  border-bottom: 2px solid #cccccc;
+}
+
+img { 
+  float: left;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+} 
+
+#logo {
+  float: left;
+  width: 250px;
+  height: 90px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background: #4aaaa5;
+}
+
 
     p {
       font-family: Arial, Helvetica, sans-serif;
@@ -34,278 +92,173 @@ body {
       padding: 20px;
     }
    
-   .container {
-     margin: 0 auto;
-     width: 100%;
-     max-width: 960px;
-   }
-
-   .topnav {
-    overflow: hidden;
-  }
-
-   .topnav a {
-    float: right;
-    text-align: center;
-    color:lightgray;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-right: lightgray solid 1px;
-    height: 5px;
-
-  }
-
-  .topnav a:first-child {
-    border-right: none;
- }
-  
-  .topnav a:hover {
+    nav {
+      float: right;
+      margin-top: 25px;
+    }
+    
+    nav a {
+      display: inline-block;
+      padding-left: 15px;
+      margin-left: 15px;
+      line-height: 18px;
+      color: #999;
+      text-decoration: none;
+      border-left: 1px solid #efefef;
+    }
+    
+    nav a:first-child {
+      border-left: 0 none;
+    }
+    
+  nav a:hover {
     background-color: #ddd;
     color: black;
   }
 
-.box {
-    width: 100%;
-    height: 500px;
-    background-image: url(../images/sakura.png);
+  footer {
+    padding: 30px 0;
     clear: both;
-}
+    font-size: 12px;
+    color: #ffffff;
+    color: #cccccc;
+    text-align: center;
+    background: #666666;
+    border-top: 8px solid #4aaaa5;
+    height: 50px;
+  }
+  
+  h3, h2 {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eeeeee;
+  }
 
-aside { 
-    background-color: #ffffff;
+ /* portfolio page */
+
+  #contact-form ul {
+    margin-bottom: 20px;
+  }
+  
+  #contact-form li {
+    margin-bottom: 10px;
+  }
+  
+  label,
+  input[type=text],
+  input[type=email],
+  textarea {
+    display: block;
+    width: 100%;
+  }
+  
+  input[type=text],
+  input[type=email],
+  textarea {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+  }
+  
+  textarea {
+    height: 200px;
+  }
+  
+  input[type=submit] {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    background: #4aaaa5;
+    border: 0 none;
+  }
+  
+    
+  /* portfolio page */
+
+  .work {
+    position: relative;
+    float: left;
+    width: 274px;
+    margin: 20px 0 25px;
+    overflow: auto;
+  }
+  
+  .work:nth-child(even) {
+    margin-right: 40px;
+  }
+  
+  .work img {
+    width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+  }
+  
+  .work h3 {
     position: absolute;
-    top: 10%;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+  }
+  
+  .auth-image {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+
+
+    
+  /* main */
+  
+  #main-container {
+    padding-top: 130px;
+    min-height: calc(100vh - 70px);
+  }
+  
+  .main-section {
+    float: left;
     width: 100%;
     max-width: 960px;
-    height: 600px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 50px;
-    margin-left: 475px; 
-    border: 1px solid #eee;
-}
+    padding: 30px;
+    margin: 0 0 40px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
 
-#bio-image { 
-     float: left;
-     height: 200px;
-     width: 200px;
-     padding: 20px;
- }   
-
-h1 {
-    color: #4aaaa5;
-   font-size: 25px;
-   border-bottom: 3px solid lightgray;
-   padding: 10px;
-}
-
-.site-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-footer {
-  background: #666666;
-  border-top: 8px solid #4aaaa5;
-  clear: both;
+@media screen and (max-width: 980px) {
+.container, .box {
+  position: relative;
   width: 100%;
-  height: 25px;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
 }
-
-/* contact CSS */
-
-#section1 { 
-  background-color: #ffffff;
-  position: absolute;
-  top: 10%;
-  width: 100%;
-  max-width: 960px;
-  height: 400px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 50px;
-  margin-left: 475px; 
-  border : 1px solid #eee;
-  color: #777777;
 }
-
-#usrform {
-padding-left: 20px;
-}
-
-input {
-  width: 90%
-}
-
-.textarea {
-  width: 940px;
-height: 300px;
-padding: 12px 20px;
-box-sizing: border-box;
-border: 2px solid #ccc;
-border-radius: 4px;
-font-size: 16px;
-resize: none;
-}
- 
-h1 {
-color: #4aaaa5;
-font-size: 25px;
-border-bottom: 3px solid lightgray;
-padding: 10px;
-}
-
-.comment {
-  width: 845px;
-  height: 150px;
-}
+  
 
 
-.button {
-  background-color: #4aaaa5;
-  max-width: 150px;
-  max-height: 200px;
-  color: #fff;
+@media (max-width: 768px) {
+.container, .box {
+  position: relative;
+    width: 100%;
+  }
 }
-
-/* Portfolio CSS */
-
-#section2 { 
-  background-color: #ffffff;
-  position: absolute;
-  top: 10%;
-  width: 100%;
-  max-width: 960px;
-  height: 700px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 50px;
-  margin-left: 475px; 
-  border : 1px solid #eee;
-}
+  
 
 
-img { 
-height: 150px;
-width: 200px;
-padding-bottom: 40px;
 
-} 
-
-.column {
-float: left;
-width: 200px;
-padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-content: "";
-display: table;
-clear: both;
-}
-
-.hangman{
-position: relative;
-display: inline-block; /* Make the width of box same as image */
-}
-.hangman .text{
-position: absolute;
-z-index: 999;
-margin: 0 auto;
-left: 0;
-right: 0;        
-text-align: center;
-top: 47%; /* Adjust this value to move the positioned div up and down */
-background: #4aaaa5;
-font-family: Arial,sans-serif;
-color: #fff;
-width: 100%; /* Set the width of the positioned div */
-}
- 
-.trivia{
-position: relative;
-display: inline-block; /* Make the width of box same as image */
-}
-.trivia .text2{
-position: absolute;
-z-index: 999;
-margin: 0 auto;
-left: 0;
-right: 0;        
-text-align: center;
-top: 23%; /* Adjust this value to move the positioned div up and down */
-background: #4aaaa5;
-font-family: Arial,sans-serif;
-color: #fff;
-width: 100%; /* Set the width of the positioned div */
-}
-
-h1 {
-color: #4aaaa5;
-font-size: 25px;
-border-bottom: 3px solid lightgray;
-padding: 10px;
-}
-
-h2{
-font-size: 18px;
-}
-
-.rps{
-position: relative;
-display: inline-block; /* Make the width of box same as image */
-}
-.rps .text3{
-position: absolute;
-z-index: 999;
-margin: 0 auto;
-left: 0;
-right: 0;        
-text-align: center;
-top: 47%; /* Adjust this value to move the positioned div up and down */
-background: #4aaaa5;
-font-family: Arial,sans-serif;
-color: #fff;
-width: 100%; /* Set the width of the positioned div */
-}
-
-.rpg{
-position: relative;
-display: inline-block; /* Make the width of box same as image */
-}
-.rpg .text4{
-position: absolute;
-z-index: 999;
-margin: 0 auto;
-left: 0;
-right: 0;        
-text-align: center;
-top: 47%; /* Adjust this value to move the positioned div up and down */
-background: #4aaaa5;
-font-family: Arial,sans-serif;
-color: #fff;
-width: 100%; /* Set the width of the positioned div */
-}
-
-.rutgers{
-position: relative;
-display: inline-block; /* Make the width of box same as image */
-}
-.rutgers .text5{
-position: absolute;
-z-index: 999;
-margin: 0 auto;
-left: 0;
-right: 0;        
-text-align: center;
-top: 47%; /* Adjust this value to move the positioned div up and down */
-background: #4aaaa5;
-font-family: Arial,sans-serif;
-color: #fff;
-width: 100%; /* Set the width of the positioned div */
-}
+@media (max-width: 640px) {
+  .container, .box {
+    position: relative;
+    width: 100%;
+  }
+  }
